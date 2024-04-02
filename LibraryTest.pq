@@ -534,7 +534,8 @@
             Value.VersionIdentity = Value.VersionIdentity, 
             Value.Versions = Value.Versions, 
             Value.ViewError = Value.ViewError, 
-            Value.ViewFunction = Value.ViewFunction
+            Value.ViewFunction = Value.ViewFunction,
+            Web.Contents = Web.Contents
         ],
     _shared_binary =
         Binary.Buffer ( Web.Contents ( "https://raw.githubusercontent.com/JustinMartin0807/PowerQueryFunctions/main/fxLibrary.pq" ) ),
