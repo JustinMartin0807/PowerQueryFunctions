@@ -17,7 +17,7 @@
                         },
                         Text.Lower ( stringToCheck )
                     ) or
-                        M[fxIsNullOrEmpty] ( stringToCheck )
+                        fx[fxIsNullOrEmpty] ( stringToCheck )
                 then
                     "0"
                 else
