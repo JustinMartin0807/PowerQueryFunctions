@@ -20,7 +20,7 @@
                         {
                             _,
                             each
-                                fxBooleanToBinaryString ( _ )
+                                fx[fxBooleanToBinaryString] ( _ )
                         }
                     )
                 ),
