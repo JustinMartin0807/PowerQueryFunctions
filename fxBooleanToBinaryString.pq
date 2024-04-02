@@ -17,7 +17,7 @@
                         },
                         Text.Lower ( stringToCheck )
                     ) or
-                        fxGetFunction ( "fxIsNullOrEmpty.pq" ) ( stringToCheck )
+                        fxIsNullOrEmpty ( stringToCheck )
                 then
                     "0"
                 else
