@@ -558,7 +558,7 @@
                         ]
                 )
             ),
-            List.Combine (
+            Record.Combine (
                 {
                     _shared_default,
                     _new_shared
@@ -576,7 +576,7 @@
                         ]
                 )
             ),
-            List.Combine (
+            Record.Combine (
                 {
                     _shared_default,
                     _new_shared
@@ -594,7 +594,7 @@
                         ]
                 )
             ),
-            List.Combine (
+            Record.Combine (
                 {
                     _shared_default,
                     _new_shared
