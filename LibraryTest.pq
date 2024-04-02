@@ -539,7 +539,7 @@
             Expression.Evaluate = Expression.Evaluate
         ],
     _shared_binary =
-        Binary.Buffer ( Web.Contents ( "https://raw.githubusercontent.com/JustinMartin0807/PowerQueryFunctions/main/fxLibrary.pq" ) ),
+        Binary.Buffer ( Web.Contents ( "https://raw.githubusercontent.com/JustinMartin0807/PowerQueryFunctions/main/LibraryTest.pq" ) ),
     _new_shared =
         Expression.Evaluate (
             Text.FromBinary (
@@ -558,7 +558,12 @@
                         ]
                 )
             ),
-            _new_shared
+            List.Combine (
+                {
+                    _shared_default,
+                    _new_shared
+                }
+            )
         ),                  
     fxBooleanToBinaryString =
         Expression.Evaluate (
@@ -571,7 +576,12 @@
                         ]
                 )
             ),
-            _new_shared
+            List.Combine (
+                {
+                    _shared_default,
+                    _new_shared
+                }
+            )
         ),
     fxConvertBooleans = 
         Expression.Evaluate (
@@ -584,6 +594,11 @@
                         ]
                 )
             ),
-            _new_shared
+            List.Combine (
+                {
+                    _shared_default,
+                    _new_shared
+                }
+            )
         )  
-]               
+]
