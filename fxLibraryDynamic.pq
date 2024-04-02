@@ -539,7 +539,7 @@
             Expression.Evaluate = Expression.Evaluate
         ],
     _shared_binary =
-        Binary.Buffer ( Web.Contents ( "https://raw.githubusercontent.com/JustinMartin0807/PowerQueryFunctions/main/LibraryTest.pq" ) ),
+        Binary.Buffer ( Web.Contents ( "https://raw.githubusercontent.com/JustinMartin0807/PowerQueryFunctions/main/fxLibraryDynamic.pq" ) ),
     _new_shared =
         Expression.Evaluate (
             Text.FromBinary (
