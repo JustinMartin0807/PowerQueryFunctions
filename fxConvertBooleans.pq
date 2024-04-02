@@ -20,7 +20,7 @@
                         {
                             _,
                             each
-                                fxGetFunction ( "fxBooleanToBinaryString" ) ( _ )
+                                fxBooleanToBinaryString ( _ )
                         }
                     )
                 ),
