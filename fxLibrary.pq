@@ -1935,9 +1935,7 @@
         ) =>
             let
                 _clean_table_name =
-                    strTableName ?? strDataflowName,  
-                _clean_dev_mode =
-                    blnDevModeOverride ?? paramDevMode,                  
+                    strTableName ?? strDataflowName,                 
                 _source =
                     PowerPlatform.Dataflows(),
                 _select_workspaces =
@@ -1958,29 +1956,9 @@
                             entity = _clean_table_name,
                             version = ""
                         ]
-                    }[Data],
-                _limit_rows =
-                    if
-                        _clean_dev_mode
-                    then 
-                        Table.FirstN (
-                            _select_table,
-                            1
-                        )
-                    else
-                        _select_table
+                    }[Data]
             in
-                _limit_rows
-        in
-            Source,
-    fxGetWorkspaceName =
-        let
-            Source = () as text =>
-            let
-                _result =
-                    "IPA Energy Data - " & paramPipelineStage
-            in
-                _result
+                _select_table
         in
             Source,
     fxJoinGeoMultiGrain =
