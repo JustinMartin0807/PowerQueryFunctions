@@ -1925,42 +1925,6 @@
                 concatenate
         in
             Source,
-    fxGetDataflowItem =
-        let
-            Source = (
-            strWorkspaceName as text,
-            strDataflowName as text,
-            optional strTableName as nullable text,
-            optional blnDevModeOverride as nullable logical          
-        ) =>
-            let
-                _clean_table_name =
-                    strTableName ?? strDataflowName,                 
-                _source =
-                    PowerPlatform.Dataflows(),
-                _select_workspaces =
-                    _source {
-                        [ Id = "Workspaces" ]
-                    }[Data],
-                _select_workspace = 
-                    _select_workspaces {
-                        [ workspaceName = strWorkspaceName ]
-                    }[Data],                                           
-                _select_dataflow = 
-                    _select_workspace {
-                        [ dataflowName = strDataflowName ]
-                    }[Data],
-                _select_table =
-                    _select_dataflow {
-                        [
-                            entity = _clean_table_name,
-                            version = ""
-                        ]
-                    }[Data]
-            in
-                _select_table
-        in
-            Source,
     fxJoinGeoMultiGrain =
         let
             Source = (
